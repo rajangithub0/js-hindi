@@ -1,7 +1,7 @@
 const accountId = 23212;
 let accoutEmail = "rajan@gamil.com";
 var accountPassword = "1223344";
-accountCity = "hoshiarpur";  // dont use it is not good program.
+accountCity = "hoshiarpur";  // dont use it is not good program. due to the undefined variable name .ex let , const or var. 
 
 
 
