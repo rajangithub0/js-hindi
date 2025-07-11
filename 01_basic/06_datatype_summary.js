@@ -66,4 +66,39 @@ console.log(typeof num);
 // when you change the data it only change in copy not in original data.
 // non primitive data type using as heap memory location. when create a data non primitive datatype it gives address of data and store in memory location.
 // when you change the data it change in data orinigal data will change. because it is reference type.
-console.log("memory allocation in datatype");
+// example of memory allocation in datatype
+
+let unique = 'rajanrana';
+
+let anotherUnique = unique; // copy of data
+
+anotherUnique = 'rajan'; // change in copy not in original data
+// original data is same
+
+console.log(anotherUnique); // output: rajan    
+console.log(unique); // output: rajanrana
+
+// example of non primitive data type memory allocation
+let person = {
+    name: 'rajan',
+    age: 25
+};
+
+let anotherPerson = person; // reference of data
+
+anotherPerson.name = 'rajan rana'; // change in original data   
+console.log(anotherPerson.name); // output: rajan rana
+console.log(person.name); // output: rajan rana
+
+
+// in this example we see that when we change the data in non primitive data type it change in original data also.
+
+// in primitive data type we see that when we change the data in copy it not change in original data.
+
+// so, we can say that primitive data type is call by value and non primitive data type is call by reference.
+
+// this is the summary of data type in javascript and memory allocation in data type.
+
+// in conclusion, we can say that javascript is a dynamic type language and it is very important to understand the data type and memory allocation in data type.
+
+// this is the end of the data type summary in javascript.  
