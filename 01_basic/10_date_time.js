@@ -32,9 +32,11 @@
 // let myTimeStamp = Date.now()
 // console.log(myTimeStamp); //1753685968123
 // console.log(Math.floor(Date.now() / 1000)); //1753685968
-
 // let myCreateDate = new Date(2023, 0, 23);
 // console.log(myCreateDate.getTime());
+
+
+// -----------------time with method--------------------------
 
 
 // let newDate = new Date()
