@@ -36,3 +36,73 @@ const min = 10;
 const max = 20;
 
 console.log(Math.floor(Math.random() * (max - min + 1)) + min);
+
+
+//nums and math method
+// JavaScript Number Methods - Examples and Explanations
+
+// 1. toString()
+let num1 = 123;
+console.log("toString:", num1.toString()); // "123"
+
+// 2. toFixed(n)
+let num2 = 5.6789;
+console.log("toFixed(2):", num2.toFixed(2)); // "5.68"
+
+// 3. toExponential(n)
+let num3 = 123456;
+console.log("toExponential(2):", num3.toExponential(2)); // "1.23e+5"
+
+// 4. toPrecision(n)
+let num4 = 123.456;
+console.log("toPrecision(4):", num4.toPrecision(4)); // "123.5"
+
+// 5. parseInt()
+let str1 = "42px";
+console.log("parseInt:", parseInt(str1)); // 42
+
+// 6. parseFloat()
+let str2 = "3.14kg";
+console.log("parseFloat:", parseFloat(str2)); // 3.14
+
+// 7. isNaN()
+console.log("isNaN('abc'):", isNaN("abc")); // true
+console.log("isNaN(123):", isNaN(123)); // false
+
+// 8. isFinite()
+console.log("isFinite(123):", isFinite(123)); // true
+console.log("isFinite(Infinity):", isFinite(Infinity)); // false
+
+// 9. Number.isInteger()
+console.log("Number.isInteger(10):", Number.isInteger(10)); // true
+console.log("Number.isInteger(10.5):", Number.isInteger(10.5)); // false
+
+// 10. Math.round()
+console.log("Math.round(4.5):", Math.round(4.5)); // 5
+
+// 11. Math.floor()
+console.log("Math.floor(4.9):", Math.floor(4.9)); // 4
+
+// 12. Math.ceil()
+console.log("Math.ceil(4.1):", Math.ceil(4.1)); // 5
+
+// 13. Math.trunc()
+console.log("Math.trunc(4.7):", Math.trunc(4.7)); // 4
+
+// 14. Math.abs()
+console.log("Math.abs(-9):", Math.abs(-9)); // 9
+
+// 15. Math.max()
+console.log("Math.max(10, 20, 30):", Math.max(10, 20, 30)); // 30
+
+// 16. Math.min()
+console.log("Math.min(10, 20, 30):", Math.min(10, 20, 30)); // 10
+
+// 17. Math.pow(base, exponent)
+console.log("Math.pow(2, 3):", Math.pow(2, 3)); // 8
+
+// 18. Math.sqrt()
+console.log("Math.sqrt(25):", Math.sqrt(25)); // 5
+
+// 19. Math.random()
+console.log("Math.random():", Math.random()); // random number between 0 and 1
