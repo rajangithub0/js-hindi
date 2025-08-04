@@ -60,6 +60,105 @@ console.log("SPLICE", mya2); //SPLICE[1, 2, 3]
 console.log(myArr); //[0, 4, 5] with the splice method oringal array is refected.
 
 
+//array all methods
+// ARRAY METHODS EXAMPLES
+
+// Original Array
+const arr = [1, 2, 3, 4, 5];
+
+// 1. push() - Adds to end
+arr.push(6);
+console.log("push:", arr); // [1, 2, 3, 4, 5, 6]
+
+// 2. pop() - Removes from end
+arr.pop();
+console.log("pop:", arr); // [1, 2, 3, 4, 5]
+
+// 3. unshift() - Adds to start
+arr.unshift(0);
+console.log("unshift:", arr); // [0, 1, 2, 3, 4, 5]
+
+// 4. shift() - Removes from start
+arr.shift();
+console.log("shift:", arr); // [1, 2, 3, 4, 5]
+
+// 5. concat() - Combine arrays
+const arr2 = [6, 7];
+const combined = arr.concat(arr2);
+console.log("concat:", combined); // [1, 2, 3, 4, 5, 6, 7]
+
+// 6. join() - Convert to string
+console.log("join:", arr.join("-")); // "1-2-3-4-5"
+
+// 7. slice() - Extract a portion
+console.log("slice:", arr.slice(1, 4)); // [2, 3, 4]
+
+// 8. splice() - Add/remove in-place
+arr.splice(2, 1, 99);
+console.log("splice:", arr); // [1, 2, 99, 4, 5]
+
+// 9. indexOf()
+console.log("indexOf 4:", arr.indexOf(4)); // 3
+
+// 10. includes()
+console.log("includes 2:", arr.includes(2)); // true
+
+// 11. reverse()
+console.log("reverse:", [...arr].reverse()); // [5, 4, 99, 2, 1]
+
+// 12. sort()
+const unsorted = [3, 1, 4, 2];
+unsorted.sort();
+console.log("sort:", unsorted); // [1, 2, 3, 4]
+
+// 13. map()
+const mapped = arr.map(x => x * 2);
+console.log("map:", mapped); // [2, 4, 198, 8, 10]
+
+// 14. filter()
+const filtered = arr.filter(x => x > 3);
+console.log("filter:", filtered); // [99, 4, 5]
+
+// 15. reduce()
+const sum = arr.reduce((acc, curr) => acc + curr, 0);
+console.log("reduce:", sum); // 111
+
+// 16. forEach()
+console.log("forEach:");
+arr.forEach((x, i) => console.log(`Index ${i}: ${x}`));
+
+// 17. find()
+const found = arr.find(x => x > 3);
+console.log("find:", found); // 99
+
+// 18. findIndex()
+const findIdx = arr.findIndex(x => x === 99);
+console.log("findIndex:", findIdx); // 2
+
+// 19. every()
+console.log("every > 0:", arr.every(x => x > 0)); // true
+
+// 20. some()
+console.log("some > 100:", arr.some(x => x > 100)); // false
+
+// 21. flat()
+const nested = [1, [2, [3]]];
+console.log("flat:", nested.flat(2)); // [1, 2, 3]
+
+// 22. flatMap()
+const flatMapped = [1, 2, 3].flatMap(x => [x, x * 2]);
+console.log("flatMap:", flatMapped); // [1, 2, 2, 4, 3, 6]
+
+// 23. Array.isArray()
+console.log("isArray:", Array.isArray(arr)); // true
+
+// 24. fill()
+console.log("fill:", [1, 2, 3].fill(0)); // [0, 0, 0]
+
+// 25. copyWithin()
+const copyArr = [1, 2, 3, 4, 5];
+copyArr.copyWithin(1, 3);
+console.log("copyWithin:", copyArr); // [1, 4, 5, 4, 5]
 
 
 
