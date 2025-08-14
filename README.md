@@ -1,1 +1,2 @@
-javascript  basic to advance today I learn array and object next module  is object method.
+ javascript  basic to advance today I learn array and object next module  is object method.
+ read about function and json works
