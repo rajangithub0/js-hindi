@@ -1,0 +1,80 @@
+execute the code into node environment
+// very imp .. javascript is single thred language .
+there are three step execute the code 
+1. global execute context
+2. memory phase only for assign the variable into memory and value is undefined . If any function inside the code and  assign the defination of function.
+3. execute phase inside the execute assign the variable assign the value .
+     3.1.  indside the function defination only that block is execute where function start and end inside the curly brsces.
+     3.2.  inside the function any variable  decalre same process is repeat .
+     3.3.  inside the code multiple funnction create it create the call stack.
+        3.3.1 call stack always work on LAST IN FIRST OUT operation. (LIFO)
+        3.3.2 where the function start when function is completed the output of function  defined the  where the function define.
+        3.3.3 inside the code the function start it create the new scope its called new execute context. inside the new execute  context new environment variable and execution thread. 
+        3.3.4 when the execute  is completed the execute will return the globle execution.
+        3.3.5 when the call function execution is completed the stack is deleted .
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+follow the step the execute the process
+
+let val1=10;
+let val2=5;
+    function addNum(num1,num2){
+        let total = num1+num2;
+        return total;
+    }
+let result1=addNum(val,val2);
+let result2=addNum(10,2);
+
+process the execute code shown below
+
+//first cycle
+1. Global execute context indside the global execute use the this keyword.
+//second cycle
+2. memory phase indside the memory allocation the variable and value is undefined and function defincation.
+val1 =undefined
+val2=undefined
+addNum()=defincation
+result1= undefined
+result2=undefined
+
+//3 cycle is called execution phase
+assign the variable value
+val1=10;
+val2=5;
+// where the function defination it create the new context
+        inside the function repeat the process.
+        num1=undefined
+        num2=undefined
+        total= undefined
+        //inside the execute context  assign the value 
+        num1=>val1=10;
+        num2=>val2=5;
+        total= num1+num2; (10+5=15) store 15 into the total
+        total=15 // output
+output will store where the function called.
+result1=15
+
+//in the next line function called again but value is changed.
+result2=addNum(10,2);
+checked the where the function define.
+
+inside the function the process will execute.
+//global scope
+//memory allocation
+
+num1=10
+num2=2
+total= num1+num2; (10+2=12) when operation is done when output of the  execute is assign to total
+total 12
+total value assign the  where the function called result2, and store the output
+
+//whole code process and output 
+
+let val1=10;
+let val2=5;
+    function addNum(num1,num2){
+        let total = num1+num2;
+        return total;
+    }
+let result1=addNum(val,val2); output is 15
+let result2=addNum(10,2); output is 12
