@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai or code || dom</title>
+</head>
+<body style="background-color: #212121; color: #fff";>
+    <ul class="language">
+        <li>java script</li>
+    </ul>
+</body>
+
+<script>
+    function addLanuage(langName){
+        const li=document.createElement('li');
+        li.innerHTML=`${langName}`;
+        document.querySelector('.language').appendChild(li);
+    }
+addLanuage('java')
+addLanuage('python')
+addLanuage('c++')
+
+//opetimized code for big projects
+
+function addOptLang(langName){
+    const li=document.createElement('li')
+    li.appendChild(document.createTextNode(langName));
+    document.querySelector(`.language`).appendChild(li);
+}
+addOptLang('ruby');
+addOptLang('php');
+
+//edit
+
+const secLnag=document.querySelector(`li:nth-child(2)`)
+// secLnag.innerHTML=`mongoDB`;
+
+// optimized code for big projects
+const newLi=document.createElement('li')
+newLi.textContent= "mojo"
+secLnag.replaceWith(newLi);
+
+//edit.
+
+const thirdlang=document.querySelector("li:first-child")
+thirdlang.outerHTML=`<li>HTML</li>`;
+
+//remove
+
+const lastLang=document.querySelector("li:last-child")
+lastLang.remove();
+</script>
+</html>
