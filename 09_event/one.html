@@ -10,14 +10,14 @@
 ;">
     <h2>amazing image</h2>
     <div>
-<ul>
+<ul id="image">
 
     <li></li>
+    <li id="owl"> owl</li>
     <li></li>
     <li></li>
     <li></li>
-    <li></li>
-    <li></li>
+    <li id="google">google</li>
 </ul>
 
 
@@ -25,7 +25,72 @@
     </div>
 </body>
 <script>
+// document.getElementById("owl").onclick=function(){
+//     alert("owl is clicked")
+// } oldest version use case
+//attachEvent()
+//jquery -on
 
+// document.getElementById("owl").addEventListener("click",function(){
+//     alert("owl is clicked")
+// ,false
+// })
+
+
+// document.getElementById("owl").addEventListener("click",function(e){
+//     console.log(e);
     
+// },false)
+//type of keyborad and mouse 
+//timestamp
+//defaultPrevented
+//target
+//toElement
+//srcElement
+//currentElement
+//clientX,Y
+//screenX,Y
+//Altkey , ctrlkey , shiftkey, keycode, charcode
+
+// document.getElementById('image').addEventListener("click",function(e){
+//     console.log(`clicked inside the ul`);
+
+// })
+
+// document.getElementById('owl').addEventListener("click",function(e){
+//     console.log('owl is clicked');
+//     e.stopPropagation();
+    
+// })
+
+// if we use false in both the case then the event will be handled in bubbling phase
+// owl is clicked
+// clicked inside the ul
+// if we use true in both the case then the event will be handled in capturing phase
+// clicked inside the ul
+// owl is clicked
+// if we use true in parent and false in child then the event will be handled in capturing phase first and then in bubbling phase
+// clicked inside the ul
+
+// e.stopPropagation(); is  used to stop the event from bubbling up to the parent element
+
+// document.getElementById('google').addEventListener('click',function(e){
+//     e.preventDefault()
+//     e.stopPropagation();
+//     console.log('google is clicked');
+    
+// })
+
+document.querySelector('#image').addEventListener('click',function(e){
+    console.log(e.target.tagName    );
+    if(e.target.tagName==='img'){
+        console.log('image is clicked');
+        
+        let removeli=e.target.parentNode;
+        removeli.remove();
+    }
+
+})
+// removeli.parentNode.removechild(removeli);
 </script>
 </html>
