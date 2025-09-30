@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clouser</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // function init() {
+    //     let name = "Mozilla"; 
+    //         function displayName() {        
+    //             console.log(name); 
+    //         }
+    //         displayName();
+    // }
+    // init();
+
+    function outer(){
+        let username="rajan"
+
+        // console.log("outer",secret);
+        
+        function inner(){
+            let secret="my123"
+            console.log("inner",username);
+            
+        }
+        function innerTwo(){
+            console.log("innertwo",username);
+            console.log(secret);
+            
+        }
+        inner()
+        innerTwo()
+    }
+    outer()
+    console.log("to outer",username);
+    
+</script>
+</html>
